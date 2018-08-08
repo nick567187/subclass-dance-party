@@ -1,6 +1,6 @@
 $(document).ready(function() {
   window.dancers = [];
-
+  
   $('.popUpContainer').hover(function(event) {
       console.log('in')
     $('.explosion').css('display', 'block');
@@ -118,7 +118,7 @@ $(document).ready(function() {
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
     // make a dancer with a random position
-
+    var snd = new Audio("7.ogg");
     var dancer = new dancerMakerFunction(
       ($("body").height() * Math.random())/2 + $("body").height()/2 - 300,
       $("body").width() * Math.random(),
@@ -127,6 +127,7 @@ $(document).ready(function() {
     if(dancers.length < 19) {
       window.dancers.push(dancer);
       $('body').append(dancer.$node);
+      snd.play();
     }
   });
 });
