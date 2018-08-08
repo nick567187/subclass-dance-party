@@ -1,13 +1,13 @@
 var makeJumpingDancer = function(top, left, timeBetweenSteps) {
   
   Dancer.call(this, top, left, timeBetweenSteps);
-  this.timeBetweenSteps = 2;
+  this.time = 1000;
 
   this.oldStep = Dancer.prototype.step;  
-  this.isJumping = false;
+  this.isJumping = true;
   this.$node = $('<span class="dancer taco"></span>');
   this.oldStep();
-
+  this.setPosition(this.top, this.left)
 };
 
 makeJumpingDancer.prototype = Object.create(Dancer.prototype);
@@ -19,9 +19,10 @@ makeJumpingDancer.prototype.step = function() {
   if (this.isJumping) {
     height = 0;
   } else {
-    height = 100;
+    height = 60;
   }
   this.isJumping = !this.isJumping;
   
-  this.setPosition(this.top + height, this.left);
+  this.setPosition(this.top - height, this.left);
 };
+

@@ -6,11 +6,26 @@
     <script src="lib/jquery.js"></script>
     <script src="src/dancer.js"></script>
     <script src="src/blinkyDancer.js"></script>
+    <script src="src/jumpingDancer.js"></script>
+    <script src="src/makeChillDancer.js"></script>
+    <script src="src/makeLeftShark.js"></script>
   </head>
   <body>
     <div class="topbar">
       <span class="title">object dance party</span>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a>    </div>
+      <a href="#" class="lineUpDancers"> Line 'em up! </a> 
+      <a href="#" class="neighborShowDown"> Neighbor Showdown! </a> 
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a> 
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeJumpingDancer">add a jumping dancer</a> 
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeChillDancer">add a chill dancer</a>    
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeLeftShark"> Invite a special guest to the dance party!</a>    
+    </div>
     <script src="src/init.js"></script>
+    <img src='wallpaper.jpg'>
+    <div class="popUpContainer"></div>
+    <span class='explosion'></span>
+<!--     <script>document.getElementByClassName('body').click(); </script> -->
+    <iframe id='music' src="Nujabes.mp3" allow="autoplay">
+    
   </body>
 </html>
